@@ -23,7 +23,7 @@ public class HomeController {
             modelAndView.addObject("key", "email："+ email + " password：" + password);
             return modelAndView;
         } else {
-            modelAndView.setViewName("readingList");
+            modelAndView.setViewName("view/readingList");
             return modelAndView;
         }
     }
