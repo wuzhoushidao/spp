@@ -19,8 +19,9 @@ public class HomeController {
         String password = request.getParameter("password");
         ModelAndView modelAndView = new ModelAndView();
         if (email != null && password != null) {
-            modelAndView.setViewName("datashow");
-            modelAndView.addObject("key", "email："+ email + " password：" + password);
+            modelAndView.setViewName("redirect:/user/add");
+            modelAndView.addObject("username", email );
+            modelAndView.addObject("password" , password);
             return modelAndView;
         } else {
             modelAndView.setViewName("view/readingList");
