@@ -39,6 +39,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
         <!--安全认证-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
@@ -52,6 +58,23 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.4</version>
+            </plugin>
+            <plugin>
+                <!-- WARNING Spring Boot configured pretty many maven plugins. This configuration
+                    restores back some defaults -->
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <useDefaultDelimiters>true</useDefaultDelimiters>
+                    <nonFilteredFileExtensions>
+                        <nonFilteredFileExtension>ttf</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>ttc</nonFilteredFileExtension>
+                    </nonFilteredFileExtensions>
+                </configuration>
             </plugin>
         </plugins>
     </build>
