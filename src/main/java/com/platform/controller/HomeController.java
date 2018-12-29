@@ -31,7 +31,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String printHelloWorld1() {
-        int i=0;
         return "/view/readingList";
     }
 }
