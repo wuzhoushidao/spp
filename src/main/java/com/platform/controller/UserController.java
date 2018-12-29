@@ -30,7 +30,7 @@ public class UserController {
     public String add(@RequestParam("username") String username, @RequestParam("password") String password) {
         User user = userRepository.findByUsername(username);
         if (user != null) {
-            return "用户名已经存在！";
+            return "1";
         } else {
             User user2 = new User();
             user2.setUsername(username);

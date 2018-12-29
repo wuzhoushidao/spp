@@ -29,8 +29,8 @@ public class HomeController {
         }
     }
 
-    @RequestMapping("/helloo")
+    @RequestMapping("/")
     public String printHelloWorld1() {
-        return "hahaha";
+        return "/view/readingList";
     }
 }
